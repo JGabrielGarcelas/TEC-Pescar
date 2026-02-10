@@ -6,3 +6,13 @@ h1 {
     font-family: 'roboto slab', serif;
     color: #181818
 }
+
+.black_box {
+    color: #000000;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.image {
+    width: 50%;
+    height: auto;
+}
