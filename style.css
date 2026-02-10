@@ -1,13 +1,8 @@
 body {
-<<<<<<< HEAD
-    background-color: #4169e1;
-=======
-
-    font-family: 'Roboto Slab', serif;
     background-color: #4169e1;
 }
 
-.title {
-    text-align: center;
->>>>>>> 4bc8ac96971940002e172e27c1f8193f2d90b79a
+h1 {
+    font-family: 'roboto slab', serif;
+    color: #181818
 }
