@@ -12,6 +12,18 @@ h1 {
     font-family: 'Source Code Pro', monospace;
 }
 
+.alunos_text {
+    visibility: hidden;
+    color: #000000;
+    font-family: 'Source Code Pro', monospace;
+}
+
+button {
+    font-family: 'roboto slab', serif;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #fa8722;
+}
 
 .title {
     text-align: center;
