@@ -3,6 +3,7 @@ body {
     background-color: #4169e1;
 }
 
+<<<<<<< HEAD
    h1 {
         font-family: 'Roboto Slab', serif; 
         color: #4f4d4d;
@@ -11,3 +12,8 @@ body {
         margin-bottom: 1rem;
    }
 
+=======
+.title {
+    text-align: center;
+}
+>>>>>>> 4bc8ac96971940002e172e27c1f8193f2d90b79a
