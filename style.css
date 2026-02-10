@@ -1,0 +1,25 @@
+body {
+<<<<<<< HEAD
+    background-color: #4169e1;
+=======
+
+    font-family: 'Roboto Slab', serif;
+    background-color: #4169e1;
+}
+
+.title {
+    text-align: center;
+<<<<<<< HEAD:Frontend/style.css
+    font-size: 3rem;
+}
+
+.image {
+   display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  height: 100px; 
+    
+=======
+>>>>>>> 4bc8ac96971940002e172e27c1f8193f2d90b79a
+>>>>>>> 17ca0e4c77fc708e992375e3e3f7eff16091a4ba:style.css
+}
