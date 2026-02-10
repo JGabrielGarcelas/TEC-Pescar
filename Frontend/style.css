@@ -1,5 +1,13 @@
 body {
-
-    font-family: 'Roboto Slab', serif;
+    width: 100vh;
     background-color: #4169e1;
 }
+
+   h1 {
+        font-family: 'Roboto Slab', serif; 
+        color: #4f4d4d;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+   }
+
