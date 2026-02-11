@@ -2,7 +2,6 @@ body {
     background-color: #4169e1;
     width: 99.5%;
     text-align: center;
-    margin-bottom: 90px;
 }
 
 h1 {
@@ -53,6 +52,7 @@ button:hover {
     max-width: 600px;
     border-radius: 10px;
     margin: 20px 0;
+    margin: 30px;
 }
 
 img {
