@@ -59,3 +59,16 @@ img {
     border-radius: 10px;
     margin: 20px 0;
 }
+
+.presentation_text{
+    background-color: rgba(0, 0, 0, 0.5);
+    color : #ffffff;
+    font-family: 'Source Code Pro', monospace;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
