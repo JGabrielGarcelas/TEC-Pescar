@@ -68,6 +68,7 @@ button:active {
     margin: 0 auto;
 }
 
+
 .foto_turma {
     max-width: 100%;
     width: 600px;
@@ -128,7 +129,6 @@ h2 {
     padding: 15px;
 }
 
-/* RESPONSIVIDADE - Tablets */
 @media screen and (max-width: 1024px) {
     .section_button {
         bottom: 30px;
@@ -149,7 +149,6 @@ h2 {
     }
 }
 
-/* RESPONSIVIDADE - Mobile */
 @media screen and (max-width: 768px) {
     body {
         padding: 10px 0;
@@ -189,7 +188,6 @@ h2 {
     }
 }
 
-/* RESPONSIVIDADE - Mobile pequeno */
 @media screen and (max-width: 480px) {
     h2 {
         font-size: 1.1rem;
@@ -217,7 +215,6 @@ h2 {
     }
 }
 
-/* RESPONSIVIDADE - Mobile muito pequeno */
 @media screen and (max-width: 360px) {
     .foto_turma {
         margin: 8px auto;
