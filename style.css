@@ -60,3 +60,50 @@ img {
     margin: 20px 0;
 }
 .section_button { position: fixed; bottom: 670px; right: 650px; }
+
+.presentation_text {
+    color: #e8eaed;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+h2 {
+    
+
+    font-family: 'roboto slab', serif;
+}
+
+
+
+.educadores_text {
+    display: none;
+    color: #000000;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.extern_activies{
+    color: #000000;
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+.honda_exit {
+    color: #e8eaed;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-family: 'roboto slab', serif;
+}
+.Senac_tech {
+    color: #e8eaed;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-family: 'roboto slab', serif;
+}
+
+.PUCRS_exit{
+    color: #e8eaed;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-family: 'roboto slab', serif;
+
+}
