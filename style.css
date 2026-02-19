@@ -59,4 +59,9 @@ img {
     border-radius: 10px;
     margin: 20px 0;
 }
-.section_button { position: fixed; bottom: 670px; right: 650px; }
+.section_button { 
+    position: fixed;
+    bottom: 690px;
+    right: 1410px;
+}
+
