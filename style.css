@@ -1,12 +1,22 @@
 body {
     background-color: #4169e1;
-    width: 99.5%;
+    width: 100%;
+    min-height: 100vh;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 h1 {
     font-family: 'roboto slab', serif;
-    color: #181818
+    color: #181818;
+    margin: 20px 0;
+}
+
+p {
+    max-height: fit-content;
+    padding: 0 15px;
 }
 
 .black_box {
@@ -25,43 +35,207 @@ button {
     font-size: medium;
     font-weight: bold;
     background-color: rgba(80, 81, 84, 0.8);
-    border: 1px solid #ededf0;
+    border: 2px solid transparent;
     border-radius: 8px;
     color: #e8eaed;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
+    padding: 12px 24px;
 }
 
 button:hover {
     border-color: #e8eaed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+button:active {
+    transform: translateY(0);
+}
+
 .title {
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    padding: 0 20px;
 }
 
 .image {
-    width: 205vh;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     flex-grow: 1;
+    margin: 0 auto;
 }
 
 .foto_turma {
-    max-width: 600px;
+    max-width: 100%;
+    width: 600px;
     border-radius: 10px;
-    margin: 20px 0;
-    margin: 30px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.foto_turma:hover {
+    transform: scale(1.02);
 }
 
 img {
     border-radius: 10px;
     margin: 20px 0;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
+<<<<<<< HEAD
 .section_button { 
     position: fixed;
     bottom: 690px;
     right: 1410px;
 }
 
+=======
+
+.section_button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+}
+
+.presentation_text,
+.honda_exit,
+.Senac_tech,
+.PUCRS_exit {
+    color: #e8eaed;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    font-family: 'roboto slab', serif;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    backdrop-filter: blur(5px);
+}
+
+h2 {
+    font-family: 'roboto slab', serif;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin: 15px 0;
+}
+
+.educadores_text {
+    display: none;
+    color: #000000;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.extern_activies {
+    color: #000000;
+    font-family: 'Source Code Pro', monospace;
+    padding: 15px;
+}
+
+/* RESPONSIVIDADE - Tablets */
+@media screen and (max-width: 1024px) {
+    .section_button {
+        bottom: 30px;
+        right: 30px;
+    }
+    
+    .foto_turma {
+        max-width: 90%;
+        width: 500px;
+    }
+    
+    .presentation_text,
+    .honda_exit,
+    .Senac_tech,
+    .PUCRS_exit {
+        padding: 18px;
+        margin: 15px auto;
+    }
+}
+
+/* RESPONSIVIDADE - Mobile */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px 0;
+    }
+    
+    .image {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+    .foto_turma {
+        max-width: 95%;
+        width: 100%;
+        margin: 15px auto;
+    }
+    
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    
+    .section_button {
+        position: static;
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
+    }
+    
+    .presentation_text,
+    .honda_exit,
+    .Senac_tech,
+    .PUCRS_exit {
+        margin: 10px auto;
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+}
+
+/* RESPONSIVIDADE - Mobile pequeno */
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.1rem;
+    }
+    
+    .foto_turma {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    
+    button {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+        width: 90%;
+        max-width: 250px;
+    }
+    
+    .presentation_text,
+    .honda_exit,
+    .Senac_tech,
+    .PUCRS_exit {
+        padding: 12px;
+        font-size: 0.9rem;
+        max-width: 95%;
+    }
+}
+
+/* RESPONSIVIDADE - Mobile muito pequeno */
+@media screen and (max-width: 360px) {
+    .foto_turma {
+        margin: 8px auto;
+    }
+    
+    .presentation_text,
+    .honda_exit,
+    .Senac_tech,
+    .PUCRS_exit {
+        padding: 10px;
+    }
+}
+>>>>>>> 2a2c354e557f14981835262fa0654838f31a8ba7
