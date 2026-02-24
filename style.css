@@ -1,229 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --blue-deep:    #1a2f6e;
+  --blue-mid:     #2548b3;
+  --blue-bright:  #3a63e8;
+  --blue-light:   #6b8ef5;
+  --blue-pale:    #d6e0ff;
+
+  --ink:          #0d1333;
+  --white:        #f5f7ff;
+  --glass:        rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --shadow-dark:  rgba(10, 18, 60, 0.45);
+
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
 body {
-    background-color: #4169e1;
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden scroll;
+  font-family: var(--font-body);
+  background-color: var(--blue-mid);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, var(--blue-bright) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 90% 90%, var(--blue-deep) 0%, transparent 60%);
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden scroll;
+  padding-bottom: 60px;
 }
 
 h1 {
-    font-family: 'roboto slab', serif;
-    color: #181818;
-    margin: 20px 0;
+  font-family: 'roboto slab', serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 32px 0 12px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3.5vw, 1.9rem);
+  letter-spacing: -0.01em;
+  margin: 14px 0;
 }
 
 p {
-    max-height: fit-content;
-    padding: 0 15px;
-}
-
-.black_box {
-    color: #000000;
-    font-family: 'Source Code Pro', monospace;
-}
-
-.alunos_text {
-    display: none;
-    color: #000000;
-    font-family: 'Source Code Pro', monospace;
-}
-
-button {
-    font-family: 'roboto slab', serif;
-    font-size: medium;
-    font-weight: bold;
-    background-color: rgba(80, 81, 84, 0.8);
-    border: 2px solid transparent;
-    border-radius: 8px;
-    color: #e8eaed;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    padding: 12px 24px;
-}
-
-button:hover {
-    border-color: #e8eaed;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-button:active {
-    transform: translateY(0);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  max-height: fit-content;
+  padding: 0 15px;
+  font-weight: 300;
 }
 
 .title {
-    text-align: center;
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    padding: 0 20px;
-}
-
-.image {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    margin: 0 auto;
-}
-
-
-.foto_turma {
-    max-width: 100%;
-    width: 600px;
-    border-radius: 10px;
-    margin: 20px auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.foto_turma:hover {
-    transform: scale(1.02);
-}
-
-img {
-    border-radius: 10px;
-    margin: 20px 0;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.section_button {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    z-index: 100;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  padding: 0 20px;
+  letter-spacing: -0.02em;
 }
 
 .presentation_text,
 .honda_exit,
 .Senac_tech,
 .PUCRS_exit {
-    color: #e8eaed;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    font-family: 'roboto slab', serif;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 90%;
-    backdrop-filter: blur(5px);
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-weight: 300;
+  padding: 28px 32px;
+  margin: 24px auto;
+  max-width: 860px;
+  width: 90%;
+  box-shadow:
+    0 8px 32px var(--shadow-dark),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-h2 {
-    font-family: 'roboto slab', serif;
-    font-size: clamp(1.2rem, 4vw, 2rem);
-    margin: 15px 0;
+.presentation_text:hover,
+.honda_exit:hover,
+.Senac_tech:hover,
+.PUCRS_exit:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 48px var(--shadow-dark),
+    inset 0 1px 0 rgba(255,255,255,0.22);
+}
+
+.black_box {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.alunos_text {
+  display: none;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
 }
 
 .educadores_text {
-    display: none;
-    color: #000000;
-    font-family: 'Source Code Pro', monospace;
+  display: none;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
 }
 
 .extern_activies {
-    color: #000000;
-    font-family: 'Source Code Pro', monospace;
-    padding: 15px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 15px;
+}
+
+button,
+.button {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  cursor: pointer;
+  padding: 12px 28px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.button { margin: 20px; }
+
+button:hover,
+.button:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(10, 18, 60, 0.35);
+}
+
+button:active,
+.button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.section_button {
+  position: fixed;
+  bottom: 44px;
+  right: 44px;
+  z-index: 100;
+}
+
+.image {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+.imgs_alunos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 16px;
+  padding: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aluno_card img {
+  width: 100%;
+  height: auto;
+}
+
+.aluno_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.aluno_card .button {
+  margin: 0;
+}
+
+.imgs_educadores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+img {
+  border-radius: var(--radius-lg);
+}
+
+.foto_turma {
+  max-width: 100%;
+  width: 600px;
+  border-radius: var(--radius-lg);
+  margin: 20px auto;
+  box-shadow:
+    0 4px 16px var(--shadow-dark),
+    0 0 0 1px var(--glass-border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.foto_turma:hover {
+  transform: scale(1.025);
+  box-shadow:
+    0 12px 40px var(--shadow-dark),
+    0 0 0 1px rgba(255,255,255,0.25);
+}
+
+.senac,
+.puc,
+.honda,
+.extern_activities_imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 @media screen and (max-width: 1024px) {
-    .section_button {
-        bottom: 30px;
-        right: 30px;
-    }
-    
-    .foto_turma {
-        max-width: 90%;
-        width: 500px;
-    }
-    
-    .presentation_text,
-    .honda_exit,
-    .Senac_tech,
-    .PUCRS_exit {
-        padding: 18px;
-        margin: 15px auto;
-    }
+  .section_button {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .foto_turma {
+    max-width: 90%;
+    width: 500px;
+  }
+
+  .presentation_text,
+  .honda_exit,
+  .Senac_tech,
+  .PUCRS_exit {
+    padding: 22px 24px;
+    margin: 16px auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        padding: 10px 0;
-    }
-    
-    .image {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-    }
-    
-    .foto_turma {
-        max-width: 95%;
-        width: 100%;
-        margin: 15px auto;
-    }
-    
-    button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-    
-    .section_button {
-        position: static;
-        margin: 20px auto;
-        display: block;
-        width: fit-content;
-    }
-    
-    .presentation_text,
-    .honda_exit,
-    .Senac_tech,
-    .PUCRS_exit {
-        margin: 10px auto;
-        padding: 15px;
-        font-size: 0.95rem;
-    }
+  body { padding: 10px 0 60px; }
+
+  .image {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .imgs_alunos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .foto_turma {
+    max-width: 95%;
+    width: 100%;
+    margin: 14px auto;
+  }
+
+  button, .button {
+    font-size: 0.88rem;
+    padding: 10px 20px;
+  }
+
+  .section_button {
+    position: static;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+  }
+
+  .presentation_text,
+  .honda_exit,
+  .Senac_tech,
+  .PUCRS_exit {
+    margin: 12px auto;
+    padding: 18px 16px;
+    font-size: 0.93rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    h2 {
-        font-size: 1.1rem;
-    }
-    
-    .foto_turma {
-        max-width: 100%;
-        margin: 10px auto;
-    }
-    
-    button {
-        font-size: 0.85rem;
-        padding: 8px 16px;
-        width: 90%;
-        max-width: 250px;
-    }
-    
-    .presentation_text,
-    .honda_exit,
-    .Senac_tech,
-    .PUCRS_exit {
-        padding: 12px;
-        font-size: 0.9rem;
-        max-width: 95%;
-    }
+  h2 { font-size: 1.1rem; }
+
+  .imgs_alunos {
+    grid-template-columns: 1fr;
+  }
+
+  .foto_turma {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  button, .button {
+    font-size: 0.84rem;
+    padding: 9px 16px;
+    width: 90%;
+    max-width: 260px;
+  }
+
+  .presentation_text,
+  .honda_exit,
+  .Senac_tech,
+  .PUCRS_exit {
+    padding: 14px 12px;
+    font-size: 0.88rem;
+    max-width: 96%;
+  }
 }
 
 @media screen and (max-width: 360px) {
-    .foto_turma {
-        margin: 8px auto;
-    }
-    
-    .presentation_text,
-    .honda_exit,
-    .Senac_tech,
-    .PUCRS_exit {
-        padding: 10px;
-    }
+  .foto_turma { margin: 8px auto; }
+
+  .presentation_text,
+  .honda_exit,
+  .Senac_tech,
+  .PUCRS_exit {
+    padding: 10px;
+  }
 }
